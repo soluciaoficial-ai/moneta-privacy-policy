@@ -3,106 +3,238 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Política de privacidad de Moneta, aplicación de presupuesto personal.">
+  <meta name="description" content="Política de privacidad de Moneta, aplicación de presupuesto personal por Soluc-IA.">
+  <meta name="theme-color" content="#101a2b">
+  
   <title>Política de privacidad | Moneta</title>
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪙</text></svg>">
+
   <style>
-    :root { color-scheme: light; --ink: #101a2b; --mint: #168c72; --muted: #596579; --line: #e4e9ee; }
+    :root {
+      color-scheme: light;
+      --ink: #101a2b;
+      --mint: #168c72;
+      --mint-hover: #0e6350;
+      --mint-bg: #edf8f5;
+      --muted: #596579;
+      --line: #e4e9ee;
+      --bg: #f8fafc;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; background: #f5f7f8; color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
-    header { background: var(--ink); color: white; padding: 36px 20px 30px; }
-    header div, main { max-width: 820px; margin: 0 auto; }
-    header p { margin: 6px 0 0; color: #b8c7d7; }
-    h1 { margin: 0; font-size: clamp(27px, 5vw, 38px); line-height: 1.2; }
-    h2 { margin: 30px 0 8px; font-size: 21px; }
-    main { margin: 24px auto 48px; padding: 28px clamp(20px, 5vw, 48px); background: white; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 12px 35px #101a2b0a; }
-    nav { display: flex; flex-wrap: wrap; gap: 10px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-    nav a, a { color: var(--mint); }
-    nav a { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-weight: 650; }
-    nav a:hover { background: #edf8f5; }
-    .updated { color: var(--muted); font-size: 14px; }
-    section { padding-top: 6px; scroll-margin-top: 20px; }
-    footer { max-width: 820px; margin: -24px auto 40px; padding: 0 20px; color: var(--muted); font-size: 13px; }
-    @media (max-width: 560px) { main { margin: 14px 10px 36px; padding: 22px 18px; } }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: var(--ink);
+      color: white;
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+    header div { max-width: 820px; margin: 0 auto; }
+    header p { margin: 8px 0 0; color: #b8c7d7; font-size: 1.05rem; }
+    h1 { margin: 0; font-size: clamp(26px, 4vw, 36px); line-height: 1.25; font-weight: 700; }
+    h2 { margin: 32px 0 10px; font-size: 1.25rem; color: var(--ink); border-bottom: 2px solid var(--line); padding-bottom: 4px; }
+    
+    main {
+      max-width: 820px;
+      margin: 24px auto 48px;
+      padding: 32px clamp(20px, 5vw, 48px);
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(16, 26, 43, 0.05);
+    }
+    
+    /* Navegación por pestañas */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    nav button {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    nav button:hover {
+      background: var(--mint-bg);
+      color: var(--mint);
+      border-color: var(--mint);
+    }
+    nav button.active {
+      background: var(--mint);
+      color: white;
+      border-color: var(--mint);
+    }
+
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+      background: var(--bg);
+      padding: 8px 14px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    
+    a { color: var(--mint); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--mint-hover); }
+
+    footer {
+      max-width: 820px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    
+    @media (max-width: 560px) {
+      main { margin: 12px 10px 32px; padding: 20px 16px; }
+      nav button { padding: 6px 12px; font-size: 13px; }
+    }
   </style>
 </head>
 <body>
-  <header><div>
-    <h1>Política de privacidad de Moneta</h1>
-    <p>Información sobre los datos que maneja la aplicación de presupuesto personal Moneta.</p>
-  </div></header>
+  <header>
+    <div>
+      <h1>Política de Privacidad de Moneta</h1>
+      <p>Aplicación de presupuesto y finanzas personales</p>
+    </div>
+  </header>
+  
   <main>
-    <nav aria-label="Language / Idioma">
-      <a href="#es">Español</a><a href="#en">English</a><a href="#pt">Português</a><a href="#fr">Français</a>
+    <nav aria-label="Idioma / Language">
+      <button onclick="setLang('es')" id="btn-es" class="active">Español</button>
+      <button onclick="setLang('en')" id="btn-en">English</button>
+      <button onclick="setLang('pt')" id="btn-pt">Português</button>
+      <button onclick="setLang('fr')" id="btn-fr">Français</button>
     </nav>
 
-    <section id="es" lang="es">
-      <p class="updated"><strong>Última actualización:</strong> 5 de noviembre de 2026</p>
+    <!-- ESPAÑOL -->
+    <section id="es" class="lang-section active" lang="es">
+      <div class="updated"><strong>Última actualización:</strong> 5 de noviembre de 2026</div>
       <p>Moneta es una aplicación para organizar un presupuesto personal. No crea cuentas ni ofrece préstamos, pagos, servicios bancarios o asesoría financiera profesional.</p>
+      
       <h2>Datos guardados en el dispositivo</h2>
       <p>Para ofrecer sus funciones, Moneta guarda en el dispositivo los datos que ingresas: ingresos, gastos, categorías, deudas, cuotas, metas, movimientos de ahorro, moneda, idioma y preferencias. La versión actual no envía esos registros a servidores de Moneta ni incluye servicios de publicidad o analítica.</p>
       <p>Los recordatorios de deudas son notificaciones locales programadas en el teléfono. Android puede mostrar en ellas el nombre y el monto que escribiste, según tus permisos y ajustes de notificaciones.</p>
+      
       <h2>Exportaciones y copias de seguridad</h2>
       <p>Puedes exportar archivos CSV o JSON y elegir dónde guardarlos o desde dónde restaurarlos mediante el selector de archivos de Android. Moneta no carga automáticamente estos archivos a servicios externos. Si eliges una ubicación en la nube u otra aplicación, el proveedor elegido aplica sus propias condiciones y prácticas de privacidad.</p>
       <p>Android o el fabricante del dispositivo podrían incluir datos de aplicaciones en una copia de seguridad, según la configuración de respaldo que hayas elegido. El tratamiento de esa copia depende del servicio de respaldo correspondiente.</p>
+      
       <h2>Conservación y eliminación</h2>
       <p>Los registros se conservan en el dispositivo hasta que los elimines desde Moneta, borres los datos de la app o desinstales la aplicación. Los archivos exportados y las copias de seguridad se conservan hasta que los elimines en el lugar donde se guardaron.</p>
+      
       <h2>Seguridad</h2>
       <p>Moneta utiliza el almacenamiento local de Android y no añade cifrado propio para los datos del presupuesto. La protección del dispositivo depende de los controles de seguridad que configures en Android. Guarda los archivos exportados en una ubicación de confianza.</p>
+      
       <h2>Contacto y cambios</h2>
       <p>Si tienes preguntas sobre privacidad, escribe a <a href="mailto:solucia.oficial@gmail.com">solucia.oficial@gmail.com</a>. Esta política se actualizará si cambian las funciones de Moneta o la forma en que se manejan los datos.</p>
     </section>
 
-    <section id="en" lang="en">
-      <h2>English</h2>
+    <!-- ENGLISH -->
+    <section id="en" class="lang-section" lang="en">
+      <div class="updated"><strong>Last updated:</strong> November 5, 2026</div>
       <p>Moneta is a personal budgeting app. It does not create accounts or offer loans, payments, banking services, or professional financial advice.</p>
+      
       <h2>Data stored on your device</h2>
       <p>Moneta stores the information you enter on your device to provide its features: income, expenses, categories, debts, installments, goals, savings activity, currency, language, and preferences. The current version does not send these records to Moneta servers and does not include advertising or analytics services.</p>
       <p>Debt reminders are local notifications scheduled on your phone. Android may show the debt name and amount in a notification, depending on your notification permissions and settings.</p>
+      
       <h2>Exports and backups</h2>
       <p>You can export CSV or JSON files and choose where to save or restore them using Android's file picker. Moneta does not automatically upload these files to external services. If you choose a cloud location or another app, that provider's terms and privacy practices apply.</p>
       <p>Android or your device manufacturer may include app data in a device backup, depending on your backup settings. That backup is handled under the applicable backup service's terms.</p>
+      
       <h2>Retention and deletion</h2>
       <p>Records remain on your device until you delete them in Moneta, clear the app's storage, or uninstall the app. Exported files and backups remain wherever you saved them until you delete them there.</p>
+      
       <h2>Security</h2>
       <p>Moneta uses Android local storage and does not add its own encryption for budget records. Device protection depends on the security controls you configure in Android. Store exported files in a location you trust.</p>
+      
       <h2>Contact and changes</h2>
       <p>For privacy questions, email <a href="mailto:solucia.oficial@gmail.com">solucia.oficial@gmail.com</a>. This policy will be updated if Moneta's features or data practices change.</p>
     </section>
 
-    <section id="pt" lang="pt">
-      <h2>Português</h2>
+    <!-- PORTUGUÊS -->
+    <section id="pt" class="lang-section" lang="pt">
+      <div class="updated"><strong>Última atualização:</strong> 5 de novembro de 2026</div>
       <p>Moneta é um aplicativo para organizar um orçamento pessoal. Não cria contas nem oferece empréstimos, pagamentos, serviços bancários ou aconselhamento financeiro profissional.</p>
+      
       <h2>Dados armazenados no dispositivo</h2>
       <p>Para fornecer seus recursos, Moneta armazena no dispositivo as informações inseridas: rendas, gastos, categorias, dívidas, parcelas, metas, movimentações de poupança, moeda, idioma e preferências. A versão atual não envia esses registros aos servidores da Moneta e não inclui serviços de publicidade ou análise.</p>
       <p>Os lembretes de dívidas são notificações locais programadas no telefone. O Android pode mostrar nelas o nome e o valor informado, conforme as permissões e configurações de notificação.</p>
+      
       <h2>Exportações e backups</h2>
       <p>Você pode exportar arquivos CSV ou JSON e escolher onde salvá-los ou de onde restaurá-los usando o seletor de arquivos do Android. A Moneta não envia esses arquivos automaticamente a serviços externos. Se você escolher um local na nuvem ou outro aplicativo, aplicam-se os termos e práticas desse provedor.</p>
       <p>O Android ou o fabricante do dispositivo pode incluir dados do aplicativo em um backup, conforme as configurações escolhidas. O serviço de backup correspondente trata essa cópia de acordo com seus próprios termos.</p>
+      
       <h2>Armazenamento e exclusão</h2>
       <p>Os registros permanecem no dispositivo até que você os exclua no Moneta, limpe os dados do aplicativo ou o desinstale. Arquivos exportados e backups permanecem no local escolhido até que você os exclua.</p>
+      
       <h2>Segurança</h2>
       <p>O Moneta usa o armazenamento local do Android e não adiciona criptografia própria aos dados do orçamento. A proteção depende dos controles de segurança configurados no dispositivo. Guarde os arquivos exportados em um local confiável.</p>
+      
       <h2>Contato e alterações</h2>
       <p>Para dúvidas sobre privacidade, escreva para <a href="mailto:solucia.oficial@gmail.com">solucia.oficial@gmail.com</a>. Esta política será atualizada se os recursos ou práticas de dados do Moneta mudarem.</p>
     </section>
 
-    <section id="fr" lang="fr">
-      <h2>Français</h2>
+    <!-- FRANÇAIS -->
+    <section id="fr" class="lang-section" lang="fr">
+      <div class="updated"><strong>Dernière mise à jour :</strong> 5 novembre 2026</div>
       <p>Moneta est une application de gestion de budget personnel. Elle ne crée pas de comptes et ne propose ni prêts, ni paiements, ni services bancaires, ni conseils financiers professionnels.</p>
+      
       <h2>Données enregistrées sur l’appareil</h2>
       <p>Pour fournir ses fonctionnalités, Moneta enregistre sur l’appareil les informations que vous saisissez : revenus, dépenses, catégories, dettes, échéances, objectifs, mouvements d’épargne, devise, langue et préférences. La version actuelle n’envoie pas ces données aux serveurs de Moneta et ne comprend aucun service publicitaire ou analytique.</p>
       <p>Les rappels de dette sont des notifications locales programmées sur le téléphone. Android peut y afficher le nom et le montant saisis, selon vos autorisations et paramètres de notification.</p>
+      
       <h2>Exportations et sauvegardes</h2>
       <p>Vous pouvez exporter des fichiers CSV ou JSON et choisir où les enregistrer ou depuis quel emplacement les restaurer à l’aide du sélecteur de fichiers Android. Moneta ne téléverse pas automatiquement ces fichiers vers des services externes. Si vous choisissez un service cloud ou une autre application, les conditions et pratiques de ce fournisseur s’appliquent.</p>
       <p>Android ou le fabricant de l’appareil peut inclure des données de l’application dans une sauvegarde, selon les paramètres choisis. Le service de sauvegarde concerné traite cette copie conformément à ses propres conditions.</p>
+      
       <h2>Conservation et suppression</h2>
       <p>Les données restent sur l’appareil jusqu’à leur suppression dans Moneta, à l’effacement du stockage de l’application ou à sa désinstallation. Les fichiers exportés et les sauvegardes restent à l’emplacement choisi jusqu’à leur suppression.</p>
+      
       <h2>Sécurité</h2>
       <p>Moneta utilise le stockage local d’Android et n’ajoute pas de chiffrement propre aux données budgétaires. La protection dépend des contrôles de sécurité configurés sur l’appareil. Conservez les fichiers exportés dans un emplacement de confiance.</p>
+      
       <h2>Contact et modifications</h2>
       <p>Pour toute question relative à la confidentialité, écrivez à <a href="mailto:solucia.oficial@gmail.com">solucia.oficial@gmail.com</a>. Cette politique sera mise à jour si les fonctionnalités ou pratiques de données de Moneta changent.</p>
     </section>
   </main>
-  <footer>Moneta · Política de privacidad</footer>
+
+  <footer>
+    Moneta · Desarrollado por Soluc-IA
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('nav button').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+    }
+  </script>
 </body>
 </html>
